@@ -67,7 +67,7 @@ def start_camera():
     global camera_running, latest_result
     camera_running = True
     args=parse_arguments()
-    cap = cv.VideoCapture(1)
+    cap = cv.VideoCapture(0)
 
     #Setting the resolution of the webcam
     cap.set(cv.CAP_PROP_FRAME_WIDTH, args.webcam_resolution[0])
