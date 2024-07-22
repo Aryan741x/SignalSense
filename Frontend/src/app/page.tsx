@@ -32,7 +32,7 @@ export default function Home() {
     });
 
     socket.on('latest_result', async (data) => {
-      if (data && data.result && data.result.predictions) {
+      if (data && data.result && data.result.predictions && data.result.predictions.length > 0) {
         const classes = data.result.predictions.map((prediction: { class: any; }) => prediction.class);
         setClassNames(classes);
         const response = await fetch('http://localhost:5000/generate', {
