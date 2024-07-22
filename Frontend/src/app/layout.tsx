@@ -16,6 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <meta charSet="utf-8" />
+          <title>SignalSense</title>
+          <meta name="description" content="SignalSense: Enhancing Driver Safety with Intelligent Traffic Sign Detection" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );

@@ -21,11 +21,9 @@ export default function Home() {
   }
 
   const startCamera = async () => {
+    setCameraStarted(true);
     const response = await fetch('http://localhost:5000/start_camera', { method: 'POST' });
     const data = await response.json();
-    if (data.message === 'Camera started') {
-      setCameraStarted(true);
-    }
   };
 
   useEffect(() => {
