@@ -6,3 +6,4 @@ python-dotenv
 requests
 inference-sdk
 python-socketio
+pymongo
